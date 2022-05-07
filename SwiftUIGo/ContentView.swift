@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var sayac = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        VStack{
+            
+            Button(action: {
+                self.sayac = self.sayac + 1
+            }) {
+                Text("Tıkla")
+            }
+            
+            Text("Sonuç : \(self.sayac)")
+            
+        }
     }
 }
 
